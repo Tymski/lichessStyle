@@ -1,0 +1,247 @@
+.time {
+	text-align: center !important;
+	padding: 15px 0px !important;
+	width: 100% !important;
+	min-width: 100% !important;
+	max-width: 100% !important;
+}
+
+.table_wrap * {
+	border: none !important;
+}
+
+.table_wrap {
+	border: 1px solid rgba(162, 162, 162, 0.255);
+}
+
+#friend_box {
+	display: none;
+	visibility: hidden;
+}
+
+.running {
+	border-color: rgb(220, 220, 220) !important;
+}
+
+.lichess_ground .table_wrap {
+	min-height: 512px;
+	max-height: 512px;
+	height: 512px;
+	display: flex;
+	flex-direction: column;
+	align-content: space-between;
+	background-color: rgb(38, 38, 38);
+}
+
+body {
+	background-image: none !important;
+	transition: all 0.1 ease;
+}
+
+.myTurn {
+	background-color: rgb(44, 44, 44) !important;
+}
+
+.oppTurn {
+	background-color: rgb(21, 21, 21) !important;
+}
+
+.ranks,
+.files {
+	color: rgb(214, 214, 214);
+	text-transform: capitalize;
+}
+
+.moves {
+	min-height: 150px;
+	max-height: 205px;
+	height: auto;
+	flex-grow: 100;
+}
+.table, .table_inner, .replay, .moves{
+	flex-grow:100;
+	height: auto !important;
+}
+
+.replay{
+	max-height:300px;;
+}
+
+.table{
+	max-height: 344px !important;
+}
+.table_inner{
+}
+
+/* .table_inner{
+	position: relative;
+
+} */
+
+.table {
+	width: 100% !important;
+	min-width: 100% !important;
+	max-width: 100% !important;
+	display: flex;
+	flex-direction: column;
+}
+.table_inner{
+	display: flex;
+	flex-direction: column;
+}
+
+.board_left {
+	display: inline;
+}
+
+.board_left h1,
+.players {
+	visibility: hidden;
+	display: none;
+}
+
+.side_box {
+	margin-top: 0 !important;
+	margin-bottom: -1px !important;
+}
+
+.hint--top,
+.setup {
+	display: block;
+}
+
+.side,
+.side>* {
+	box-shadow: unset;
+}
+
+.game_infos {
+	padding: 0px 0px 0px 0px !important;
+}
+
+.side_box{
+	position: relative;
+}
+.game_infos::before {
+	/* visibility: hidden;
+	display: none; */
+	position: absolute;
+	top: -40px !important;
+	left: 83px !important;
+	background-color: #262626 !important;
+	color:rgb(155, 155, 155) !important;
+	opacity: 1 !important;
+	border-radius: 100px;
+	padding: 4px !important;
+	border: 1px solid rgba(162, 162, 162, 0.255);
+}
+
+.game_infos {
+	border: none !important;
+	margin: 0 !important;
+}
+
+.moretime {
+	transition-duration: 1s;
+	color: rgba(255, 255, 255, 0) !important;
+	margin-left: -30px !important;
+	margin-right: 60px !important;
+}
+
+.moretime:hover {
+	color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.tournament_rank{
+	padding-left:10px;
+	font-size: bigger;
+}
+
+.site_header {
+	border-radius: 5px !important;
+}
+
+.crosstable{
+	padding-top: 50px;
+}
+
+.rematch{
+	height: 55px;
+	min-height: 55px;
+	max-height: 55px;
+}
+
+.follow_up > a:last-child{
+	visibility: hidden !important;
+	display: none !important;
+}
+
+.result_wrap .status{
+	padding: 0 !important;
+}
+
+.result_wrap .result{
+	padding: 0 !important;
+}
+
+/* .expiration, .suggestion{
+	position: absolute;
+	top: 0 !important;
+} */
+
+.disabled{
+	visibility: hidden !important;
+	display: none !important;
+}
+
+
+.messages{
+	height: auto !important;
+}
+#chat .content{
+	height: auto !important;
+}
+
+.site_header{
+	max-height: 512px !important;
+
+}
+
+.elongated{
+	max-height: 225px !important;
+	height: 225px !important;
+	min-height: 225px !important;
+}
+
+.shortened {
+	max-height: 170px !important;
+	height: 170px !important;
+	min-height: 170px !important;
+}
+
+.discussion .toggle_chat{
+	opacity:0;
+}
+.discussion:hover .toggle_chat{
+	opacity:1;
+}
+
+/* context-streamer text side_box 29px */
+
+.context-streamer{
+	background-color: rgb(79, 79, 79) !important;
+}
+.context-streamer:hover {
+	background-color: rgb(91, 91, 91) !important;
+}
+
+/* #chat {
+	min-height: 350px !important;
+	max-height: 350px !important;
+	height: auto !important;
+} */
+
+.cemetery:first-of-type{
+	padding-top: 9px !important;
+	margin-bottom: -4px !important;
+}
