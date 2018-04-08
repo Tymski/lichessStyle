@@ -115,14 +115,14 @@ body {
 	box-shadow: unset;
 }
 
-.game_infos {
+.game_infos:first-of-type {
 	padding: 0px 0px 0px 0px !important;
 }
 
 .side_box{
 	position: relative;
 }
-.game_infos::before {
+.game_infos:first-of-type::before {
 	/* visibility: hidden;
 	display: none; */
 	position: absolute;
@@ -136,7 +136,7 @@ body {
 	border: 1px solid rgba(162, 162, 162, 0.255);
 }
 
-.game_infos {
+.game_infos:first-of-type {
 	border: none !important;
 	margin: 0 !important;
 }
@@ -244,4 +244,12 @@ body {
 .cemetery:first-of-type{
 	padding-top: 9px !important;
 	margin-bottom: -4px !important;
+}
+
+#top{
+	padding-top: 0px !important;
+}
+
+::-webkit-scrollbar {
+	display: none;
 }

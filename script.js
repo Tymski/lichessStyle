@@ -1,5 +1,6 @@
-setTimeout(doStuff, 1);
+// setTimeout(doStuff, 1);
 
+doStuff();
 function doStuff() {
 
     console.log("Lichess Style");
@@ -29,7 +30,7 @@ function doStuff() {
         hints = document.getElementsByClassName("presets")[0];
         if (typeof hints != 'undefined') {
             hints = document.getElementsByClassName("presets")[0].children;
-            if(hints.length == 4){
+            if (hints.length == 4) {
                 hints[0].dataset.hint = "Die!";
                 hints[1].dataset.hint = "Bad luck!";
                 hints[2].dataset.hint = "Don't have fun!";
@@ -38,6 +39,11 @@ function doStuff() {
         }
         if (typeof lichessSay != 'undefined') {
             lichessSay.placeholder = "Please be rude in the chat!";
+        }
+
+        analysisForm = document.getElementsByClassName("future_game_analysis");
+        if (analysisForm.length > 0) {
+            analysisForm[0].submit();
         }
     }, 3000);
 
@@ -57,11 +63,11 @@ function doStuff() {
             }
         }
         sidebox = document.getElementsByClassName("side_box padded")[0];
-        if(typeof sidebox == 'undefined')return;
+        if (typeof sidebox == 'undefined') return;
         sideboxHeight = sidebox.offsetHeight;
         streamer = document.getElementsByClassName("context-streamer")[0];
-        streamerHeight= 0;
-        if(typeof streamer != 'undefined'){
+        streamerHeight = 0;
+        if (typeof streamer != 'undefined') {
             streamerHeight = streamer.offsetHeight;
         }
         usertv = document.getElementsByClassName("top user_tv")[0];
@@ -71,7 +77,8 @@ function doStuff() {
         }
         chatHeight = 512 - sideboxHeight - streamerHeight - usertvHeight;
         chat.style.height = chat.style.maxHeight = chat.style.minHeight = chatHeight.toString() + "px !important"
-        document.getElementsByClassName("side_box mchat")[0].style.height = chatHeight.toString() + "px"
+        sideBoxMchat = document.getElementsByClassName("side_box mchat");
+        if (sideBoxMchat.length > 0) sideBoxMchat[0].style.height = chatHeight.toString() + "px"
     }, 20);
 
 }
