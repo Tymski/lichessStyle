@@ -8,7 +8,7 @@
     "activeTab"
   ],
   "content_scripts": [{
-    "matches": ["http://*/*","https://*/*"],
+    "matches": ["http://lichess.org/*","https://lichess.org/*"],
     "css": ["css.css"],
     "js": ["script.js"]
   }]

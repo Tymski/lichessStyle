@@ -1,21 +1,20 @@
-// setTimeout(doStuff, 1);
+setTimeout(doStuff, 1);
 
-doStuff();
 function doStuff() {
 
     console.log("Lichess Style");
 
-    clock = document.getElementsByClassName("clock")[1];
-    clock2 = document.getElementsByClassName("clock")[0];
     body = document.getElementsByTagName("body")[0];
     // siteTitle = document.getElementById("site_title");
     let home = document.createElement("section");
     home.innerHTML = `<a href="/">lichess.org</a>`;
     topmenu.insertBefore(home, topmenu.firstChild);
+    clock = document.getElementsByClassName("clock")[1];
+
 
 
     setInterval(() => {
-        if (typeof clock != 'undefined')
+        if (typeof clock != 'undefined') {
             if (clock.classList.value.split(" ").pop() == "running") {
                 body.classList.add("myTurn");
                 body.classList.remove("oppTurn");
@@ -23,6 +22,9 @@ function doStuff() {
                 body.classList.add("oppTurn");
                 body.classList.remove("myTurn");
             }
+        } else {
+            clock = document.getElementsByClassName("clock")[1];
+        }
     }, 17);
 
     setTimeout(() => {
@@ -41,11 +43,13 @@ function doStuff() {
             lichessSay.placeholder = "Please be rude in the chat!";
         }
 
-        analysisForm = document.getElementsByClassName("future_game_analysis");
-        if (analysisForm.length > 0) {
-            analysisForm[0].submit();
-        }
     }, 3000);
+
+
+    analysisForm = document.getElementsByClassName("future_game_analysis");
+    if (analysisForm.length > 0) {
+        analysisForm[0].submit();
+    }
 
     setInterval(() => {
         statusElements = document.getElementsByClassName("status");
@@ -76,7 +80,9 @@ function doStuff() {
             usertvHeight = usertv.offsetHeight;
         }
         chatHeight = 512 - sideboxHeight - streamerHeight - usertvHeight;
-        chat.style.height = chat.style.maxHeight = chat.style.minHeight = chatHeight.toString() + "px !important"
+        if (typeof chat != 'undefined') {
+            chat.style.height = chat.style.maxHeight = chat.style.minHeight = chatHeight.toString() + "px !important"
+        }
         sideBoxMchat = document.getElementsByClassName("side_box mchat");
         if (sideBoxMchat.length > 0) sideBoxMchat[0].style.height = chatHeight.toString() + "px"
     }, 20);
