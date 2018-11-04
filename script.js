@@ -87,4 +87,8 @@ function doStuff() {
         if (sideBoxMchat.length > 0) sideBoxMchat[0].style.height = chatHeight.toString() + "px"
     }, 20);
 
+    setTimeout(() => {
+        location.reload(false);
+    }, 5*60*1000);
+
 }
